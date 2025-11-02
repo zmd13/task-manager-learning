@@ -152,6 +152,7 @@ button:active {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .stats p {
@@ -163,6 +164,22 @@ button:active {
     font-weight: bold;
     color: #667eea;
     font-size: 20px;
+}
+
+/* Clear Completed Section */
+.clear-section {
+    text-align: center;
+}
+
+.clear-btn {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    width: 100%;
+    padding: 12px 25px;
+    font-size: 16px;
+}
+
+.clear-btn:hover {
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
 }
 
 /* Responsive Design */
