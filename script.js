@@ -126,6 +126,29 @@ function loadTasks() {
 }
 
 /**
+ * Clear all completed tasks
+ */
+function clearCompleted() {
+    // Filter out completed tasks
+    const completedCount = tasks.filter(task => task.completed).length;
+
+    // Check if there are any completed tasks
+    if (completedCount === 0) {
+        alert('No completed tasks to clear!');
+        return;
+    }
+
+    // Ask for confirmation
+    if (confirm(`Are you sure you want to delete ${completedCount} completed task(s)?`)) {
+        tasks = tasks.filter(task => !task.completed);
+
+        // Save and re-render
+        saveTasks();
+        renderTasks();
+    }
+}
+
+/**
  * Escape HTML to prevent XSS attacks
  */
 function escapeHtml(text) {
