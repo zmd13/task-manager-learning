@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Task Manager</h1>
+
+        <!-- Task Input Section -->
+        <div class="input-section">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a new task..."
+                onkeypress="if(event.key === 'Enter') addTask()"
+            >
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <!-- Task List Section -->
+        <ul id="taskList" class="task-list">
+            <!-- Tasks will be added here dynamically -->
+        </ul>
+
+        <!-- Statistics Section -->
+        <div class="stats">
+            <p>Total Tasks: <span id="totalTasks">0</span></p>
+            <p>Completed: <span id="completedTasks">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
